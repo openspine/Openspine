@@ -108,7 +108,7 @@ OpenSpine supports partial or full-stack integration:
 
 ## Documentation
 
-Visit the [documentation site](https://openspine.cloud/documentation) for:
+Visit the [documentation site](https://openspine.cloud/documentation.html) for:
 - API Reference
 - Integration guides
 - Implementation examples
