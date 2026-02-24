@@ -158,6 +158,24 @@ p {
     width: 100%;
 }
 
+.nav-github {
+    background: var(--mono-bg);
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.nav-github:hover {
+    background: var(--accent);
+    color: white !important;
+    border-color: var(--accent);
+}
+
+.nav-github:after {
+    display: none;
+}
+
 /* Hero Section */
 .hero {
     padding: 100px 0 80px;
@@ -463,6 +481,29 @@ p {
     font-family: 'SF Mono', monospace;
     font-size: 0.8rem;
     color: var(--accent-dim);
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 1em 0;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-separator {
+    color: var(--border);
 }
 
 /* Page Header */
