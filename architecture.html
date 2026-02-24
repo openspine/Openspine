@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture — OpenSpine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-background"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">OpenSpine</a>
+            <div class="nav-links">
+                <a href="architecture.html">Architecture</a>
+                <a href="layers.html">System Layers</a>
+                <a href="governance.html">Governance</a>
+                <a href="documentation.html">Documentation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>System Architecture</h1>
+            <p class="page-subtitle">Technical design and implementation details of the OpenSpine coordination infrastructure.</p>
+        </div>
+    </section>
+
+    <!-- Architecture Details -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Core Design Principles</h2>
+            <div class="architecture-principles">
+                <div class="principle-card">
+                    <h3>Modular Separation</h3>
+                    <p>Each layer operates independently with defined interfaces. Changes to one module do not cascade through the system.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Composability</h3>
+                    <p>Layers expose standardized APIs. External systems can integrate with specific layers without full-stack adoption.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>State Isolation</h3>
+                    <p>Layer-specific state is encapsulated. Cross-layer communication occurs through event streams, not shared mutable state.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Backward Compatibility</h3>
+                    <p>API versioning ensures existing integrations continue functioning as the system evolves.</p>
+                </div>
+            </div>
+
+            <h2>Layer Communication</h2>
+            <p>Inter-layer communication follows a unidirectional data flow pattern:</p>
+            <div class="flow-diagram">
+                <div class="flow-step">
+                    <div class="flow-number">1</div>
+                    <div class="flow-content">
+                        <h4>Data Ingestion</h4>
+                        <p>Raw events enter through L1 (Identity Spine)</p>
+                    </div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-number">2</div>
+                    <div class="flow-content">
+                        <h4>State Sync</h4>
+                        <p>L2 (Coordination Engine) processes and normalizes</p>
+                    </div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-number">3</div>
+                    <div class="flow-content">
+                        <h4>Signal Extraction</h4>
+                        <p>L3 (Signal Index) aggregates patterns</p>
+                    </div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-number">4</div>
+                    <div class="flow-content">
+                        <h4>Weight Computation</h4>
+                        <p>L4 (Governance) calculates influence</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Data Persistence</h2>
+            <p>Each layer maintains its own persistence strategy optimized for its access patterns:</p>
+            <ul class="technical-list">
+                <li><span class="mono">L1 Identity Spine</span> — Append-only event log with indexed views</li>
+                <li><span class="mono">L2 Coordination Engine</span> — In-memory state with periodic snapshots</li>
+                <li><span class="mono">L3 Signal Index</span> — Time-series database for contribution metrics</li>
+                <li><span class="mono">L4 Governance</span> — Computed views, regenerated on-demand</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-title">OpenSpine</div>
+                <div class="footer-subtitle">Infrastructure Layer</div>
+                <div class="footer-version">Version 0.1 — Architectural Draft</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

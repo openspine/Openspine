@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governance Model — OpenSpine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-background"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">OpenSpine</a>
+            <div class="nav-links">
+                <a href="architecture.html">Architecture</a>
+                <a href="layers.html">System Layers</a>
+                <a href="governance.html">Governance</a>
+                <a href="documentation.html">Documentation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Governance Model</h1>
+            <p class="page-subtitle">Weight computation and decision-making mechanisms in OpenSpine ecosystems.</p>
+        </div>
+    </section>
+
+    <!-- Governance Content -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Weight Computation Formula</h2>
+            <div class="formula-section">
+                <div class="formula">
+                    <p class="mono">weight = f(contribution_depth, historical_reliability, signal_impact)</p>
+                </div>
+                <p>Governance weight is computed from provable on-chain and off-chain participation. The function adapts based on domain context and temporal factors.</p>
+            </div>
+
+            <h2>Weight Components</h2>
+            <div class="weight-components">
+                <div class="weight-card">
+                    <h3>Contribution Depth</h3>
+                    <div class="weight-metric">40%</div>
+                    <p>Measured by:</p>
+                    <ul class="metric-list">
+                        <li>Number of contributions over time</li>
+                        <li>Complexity and impact of work</li>
+                        <li>Domain expertise demonstrated</li>
+                        <li>Cross-layer participation</li>
+                    </ul>
+                </div>
+                <div class="weight-card">
+                    <h3>Historical Reliability</h3>
+                    <div class="weight-metric">35%</div>
+                    <p>Measured by:</p>
+                    <ul class="metric-list">
+                        <li>Consistency of participation</li>
+                        <li>Quality of past contributions</li>
+                        <li>Peer validation scores</li>
+                        <li>Commitment follow-through rate</li>
+                    </ul>
+                </div>
+                <div class="weight-card">
+                    <h3>Signal Impact</h3>
+                    <div class="weight-metric">25%</div>
+                    <p>Measured by:</p>
+                    <ul class="metric-list">
+                        <li>Downstream adoption of contributions</li>
+                        <li>Citations and references</li>
+                        <li>Community feedback quality</li>
+                        <li>Behavioral influence metrics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Domain-Specific Calibration</h2>
+            <p>Weight calculations adjust based on decision context. Technical decisions weigh technical contributions more heavily. Governance decisions emphasize coordination contributions.</p>
+            
+            <div class="calibration-table">
+                <div class="table-header">
+                    <div class="table-cell">Decision Type</div>
+                    <div class="table-cell">Technical Weight</div>
+                    <div class="table-cell">Coordination Weight</div>
+                    <div class="table-cell">Community Weight</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Protocol Changes</div>
+                    <div class="table-cell">70%</div>
+                    <div class="table-cell">20%</div>
+                    <div class="table-cell">10%</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Governance Updates</div>
+                    <div class="table-cell">20%</div>
+                    <div class="table-cell">50%</div>
+                    <div class="table-cell">30%</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Resource Allocation</div>
+                    <div class="table-cell">30%</div>
+                    <div class="table-cell">40%</div>
+                    <div class="table-cell">30%</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Community Standards</div>
+                    <div class="table-cell">10%</div>
+                    <div class="table-cell">30%</div>
+                    <div class="table-cell">60%</div>
+                </div>
+            </div>
+
+            <h2>Time Decay Mechanism</h2>
+            <p>Weight decays over time without continued participation. This prevents historical contributions from accumulating permanent influence without ongoing engagement.</p>
+            
+            <div class="decay-formula">
+                <p class="mono">current_weight = base_weight × e^(-λt)</p>
+                <p class="decay-note">where λ = decay constant, t = time since last contribution</p>
+            </div>
+
+            <div class="decay-parameters">
+                <div class="param-item">
+                    <div class="param-label">Half-life</div>
+                    <div class="param-value">180 days</div>
+                </div>
+                <div class="param-item">
+                    <div class="param-label">Minimum retention</div>
+                    <div class="param-value">10% of peak weight</div>
+                </div>
+                <div class="param-item">
+                    <div class="param-label">Reactivation bonus</div>
+                    <div class="param-value">50% immediate restoration</div>
+                </div>
+            </div>
+
+            <h2>Anti-Gaming Mechanisms</h2>
+            <ul class="technical-list">
+                <li><span class="mono">Sybil Resistance</span> — Weight requires behavioral history, not just account creation</li>
+                <li><span class="mono">Vote Splitting Detection</span> — Coordinated voting patterns trigger weight adjustment</li>
+                <li><span class="mono">Quality Thresholds</span> — Minimum contribution quality required for weight accumulation</li>
+                <li><span class="mono">Peer Validation</span> — Cross-agent validation prevents self-dealing</li>
+            </ul>
+
+            <h2>Voting Process</h2>
+            <ol class="process-list">
+                <li><strong>Proposal Submission:</strong> Any agent can submit proposal with minimum weight threshold</li>
+                <li><strong>Discussion Period:</strong> Community review and feedback (7-14 days)</li>
+                <li><strong>Voting Window:</strong> Weighted voting open (3-7 days)</li>
+                <li><strong>Execution Delay:</strong> Passed proposals have implementation delay (2-5 days)</li>
+                <li><strong>Emergency Override:</strong> Core security issues bypass delays with elevated quorum</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-title">OpenSpine</div>
+                <div class="footer-subtitle">Infrastructure Layer</div>
+                <div class="footer-version">Version 0.1 — Architectural Draft</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

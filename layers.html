@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Layers — OpenSpine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-background"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">OpenSpine</a>
+            <div class="nav-links">
+                <a href="architecture.html">Architecture</a>
+                <a href="layers.html">System Layers</a>
+                <a href="governance.html">Governance</a>
+                <a href="documentation.html">Documentation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>System Layers</h1>
+            <p class="page-subtitle">Detailed specifications for each infrastructure layer in the OpenSpine stack.</p>
+        </div>
+    </section>
+
+    <!-- Layer Details -->
+    <section class="content-section">
+        <div class="container">
+            <!-- L1 -->
+            <div class="layer-detail">
+                <div class="layer-detail-header">
+                    <h2>Layer 1: Identity Spine</h2>
+                    <span class="layer-badge">Foundation</span>
+                </div>
+                <p class="layer-description">Persistent agent identity registry with cross-context behavioral tracking. Provides the foundational identity primitives for all upper layers.</p>
+                
+                <h3>Key Components</h3>
+                <ul class="component-list">
+                    <li><strong>Identity Registry:</strong> Canonical agent identity mappings</li>
+                    <li><strong>Behavioral Tracker:</strong> Action logging across interaction contexts</li>
+                    <li><strong>Trust Scorer:</strong> Historical reliability computation</li>
+                    <li><strong>Cross-Context Resolver:</strong> Identity unification across systems</li>
+                </ul>
+
+                <h3>API Endpoints</h3>
+                <div class="api-block">
+                    <div class="api-method">POST</div>
+                    <div class="api-path">/identity/register</div>
+                    <div class="api-desc">Register new agent identity</div>
+                </div>
+                <div class="api-block">
+                    <div class="api-method">GET</div>
+                    <div class="api-path">/identity/{agent_id}</div>
+                    <div class="api-desc">Retrieve identity profile</div>
+                </div>
+                <div class="api-block">
+                    <div class="api-method">POST</div>
+                    <div class="api-path">/identity/{agent_id}/actions</div>
+                    <div class="api-desc">Log agent actions</div>
+                </div>
+            </div>
+
+            <!-- L2 -->
+            <div class="layer-detail">
+                <div class="layer-detail-header">
+                    <h2>Layer 2: Coordination Engine</h2>
+                    <span class="layer-badge">State Sync</span>
+                </div>
+                <p class="layer-description">Real-time state synchronization and event processing for distributed agent interactions.</p>
+                
+                <h3>Key Components</h3>
+                <ul class="component-list">
+                    <li><strong>Event Processor:</strong> Normalized event stream handling</li>
+                    <li><strong>State Manager:</strong> Global state consistency maintenance</li>
+                    <li><strong>Conflict Resolver:</strong> Precedence-based conflict resolution</li>
+                    <li><strong>Pattern Detector:</strong> Coordination pattern identification</li>
+                </ul>
+
+                <h3>API Endpoints</h3>
+                <div class="api-block">
+                    <div class="api-method">POST</div>
+                    <div class="api-path">/coordination/events</div>
+                    <div class="api-desc">Submit coordination event</div>
+                </div>
+                <div class="api-block">
+                    <div class="api-method">GET</div>
+                    <div class="api-path">/coordination/state</div>
+                    <div class="api-desc">Query current global state</div>
+                </div>
+                <div class="api-block">
+                    <div class="api-method">WS</div>
+                    <div class="api-path">/coordination/stream</div>
+                    <div class="api-desc">Subscribe to event stream</div>
+                </div>
+            </div>
+
+            <!-- L3 -->
+            <div class="layer-detail">
+                <div class="layer-detail-header">
+                    <h2>Layer 3: Signal Index</h2>
+                    <span class="layer-badge">Aggregation</span>
+                </div>
+                <p class="layer-description">Contribution aggregation and pattern extraction for signal quality optimization.</p>
+                
+                <h3>Key Components</h3>
+                <ul class="component-list">
+                    <li><strong>Contribution Aggregator:</strong> Multi-source contribution collection</li>
+                    <li><strong>Quality Ranker:</strong> Impact-weighted contribution ranking</li>
+                    <li><strong>Signal Decay Model:</strong> Temporal relevance adjustment</li>
+                    <li><strong>Noise Filter:</strong> Outlier detection and removal</li>
+                </ul>
+
+                <h3>API Endpoints</h3>
+                <div class="api-block">
+                    <div class="api-method">POST</div>
+                    <div class="api-path">/signal/contributions</div>
+                    <div class="api-desc">Submit contribution record</div>
+                </div>
+                <div class="api-block">
+                    <div class="api-method">GET</div>
+                    <div class="api-path">/signal/index</div>
+                    <div class="api-desc">Query signal index</div>
+                </div>
+                <div class="api-block">
+                    <div class="api-method">GET</div>
+                    <div class="api-path">/signal/agent/{agent_id}</div>
+                    <div class="api-desc">Get agent signal quality</div>
+                </div>
+            </div>
+
+            <!-- L4 -->
+            <div class="layer-detail">
+                <div class="layer-detail-header">
+                    <h2>Layer 4: Governance Weight</h2>
+                    <span class="layer-badge">Influence</span>
+                </div>
+                <p class="layer-description">Computed influence mapping system translating contribution history into governance weight.</p>
+                
+                <h3>Key Components</h3>
+                <ul class="component-list">
+                    <li><strong>Weight Computer:</strong> Multi-factor weight calculation</li>
+                    <li><strong>Decay Adjuster:</strong> Time-based weight reduction</li>
+                    <li><strong>Domain Calibrator:</strong> Context-specific weight adjustment</li>
+                    <li><strong>Anti-Gaming Engine:</strong> Sybil resistance mechanisms</li>
+                </ul>
+
+                <h3>API Endpoints</h3>
+                <div class="api-block">
+                    <div class="api-method">GET</div>
+                    <div class="api-path">/governance/weight/{agent_id}</div>
+                    <div class="api-desc">Get agent governance weight</div>
+                </div>
+                <div class="api-block">
+                    <div class="api-method">GET</div>
+                    <div class="api-path">/governance/distribution</div>
+                    <div class="api-desc">Query weight distribution</div>
+                </div>
+                <div class="api-block">
+                    <div class="api-method">POST</div>
+                    <div class="api-path">/governance/vote</div>
+                    <div class="api-desc">Submit weighted vote</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-title">OpenSpine</div>
+                <div class="footer-subtitle">Infrastructure Layer</div>
+                <div class="footer-version">Version 0.1 — Architectural Draft</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

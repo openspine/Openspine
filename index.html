@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSpine — Coordination Infrastructure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">OpenSpine</a>
+            <div class="nav-links">
+                <a href="architecture.html">Architecture</a>
+                <a href="layers.html">System Layers</a>
+                <a href="governance.html">Governance</a>
+                <a href="documentation.html">Documentation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>OpenSpine</h1>
+            <p class="tagline">Coordination Infrastructure for AI Ecosystems</p>
+            <p class="subtitle">A persistent identity, signal, and governance-weight layer for agent-based systems.</p>
+            <div class="hero-actions">
+                <a href="architecture.html" class="btn-inline">Read Architecture</a>
+                <a href="layers.html" class="btn-inline">View System Layers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Premise -->
+    <section class="premise">
+        <div class="container">
+            <h2>Ecosystems Fail Without Memory</h2>
+            <div class="premise-grid">
+                <div class="premise-block">
+                    <p>As agent ecosystems scale, critical system properties degrade:</p>
+                    <ul class="technical-list">
+                        <li><span class="mono">identity</span> fragments across contexts</li>
+                        <li><span class="mono">contribution</span> becomes untrackable</li>
+                        <li><span class="mono">signal</span> collapses into noise</li>
+                        <li><span class="mono">governance</span> becomes performative</li>
+                    </ul>
+                </div>
+                <div class="premise-block">
+                    <p>Without persistent state, systems operate with incomplete information. Decisions lack historical context. Trust cannot accumulate.</p>
+                    <p>OpenSpine introduces structured continuity as an infrastructure primitive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Overview -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <h2>Layered Architecture</h2>
+            <p class="section-intro">OpenSpine operates as a composable layer system. Each module maintains isolation while exposing standardized interfaces.</p>
+            
+            <div class="architecture-diagram">
+                <!-- Layer 4 -->
+                <div class="arch-layer">
+                    <div class="layer-number">L4</div>
+                    <div class="layer-content">
+                        <h3>Governance Weight Layer</h3>
+                        <p>Computed influence mapping</p>
+                    </div>
+                </div>
+                
+                <!-- Layer 3 -->
+                <div class="arch-layer">
+                    <div class="layer-number">L3</div>
+                    <div class="layer-content">
+                        <h3>Signal Index</h3>
+                        <p>Contribution aggregation & pattern extraction</p>
+                    </div>
+                </div>
+                
+                <!-- Layer 2 -->
+                <div class="arch-layer">
+                    <div class="layer-number">L2</div>
+                    <div class="layer-content">
+                        <h3>Coordination Engine</h3>
+                        <p>State synchronization & event processing</p>
+                    </div>
+                </div>
+                
+                <!-- Layer 1 -->
+                <div class="arch-layer">
+                    <div class="layer-number">L1</div>
+                    <div class="layer-content">
+                        <h3>Identity Spine</h3>
+                        <p>Persistent agent registry & behavioral tracking</p>
+                    </div>
+                </div>
+
+                <!-- Base -->
+                <div class="arch-base">
+                    <span class="mono">Ecosystem Data Layer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep-Dive Sections -->
+    <section id="layers" class="deep-dive">
+        <div class="container">
+            <h2>Core Modules</h2>
+
+            <!-- Identity Spine -->
+            <div class="module-card">
+                <div class="module-header">
+                    <h3>Identity Spine</h3>
+                    <span class="module-tag">L1</span>
+                </div>
+                <div class="module-body">
+                    <div class="module-section">
+                        <h4>Description</h4>
+                        <p>Persistent agent identity registry with behavioral tracking across interaction contexts.</p>
+                    </div>
+                    <div class="module-section">
+                        <h4>Inputs</h4>
+                        <ul class="mono-list">
+                            <li>Agent activity logs</li>
+                            <li>Contribution records</li>
+                            <li>Interaction graph data</li>
+                            <li>Cross-system identity mappings</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>Processing</h4>
+                        <ul class="mono-list">
+                            <li>Pattern indexing across temporal windows</li>
+                            <li>Behavioral clustering by action types</li>
+                            <li>Trust-weight modeling from historical reliability</li>
+                            <li>Cross-context identity resolution</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>Output</h4>
+                        <ul class="mono-list">
+                            <li>Structured identity profile</li>
+                            <li>Contribution-weight score</li>
+                            <li>Historical reliability index</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>System Impact</h4>
+                        <p>Enables persistent recognition across sessions. Provides foundation for weighted governance and signal filtering.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coordination Engine -->
+            <div class="module-card">
+                <div class="module-header">
+                    <h3>Coordination Engine</h3>
+                    <span class="module-tag">L2</span>
+                </div>
+                <div class="module-body">
+                    <div class="module-section">
+                        <h4>Description</h4>
+                        <p>State synchronization mechanism for distributed agent interactions with event processing pipeline.</p>
+                    </div>
+                    <div class="module-section">
+                        <h4>Inputs</h4>
+                        <ul class="mono-list">
+                            <li>Agent state updates</li>
+                            <li>Cross-agent communication events</li>
+                            <li>Task completion records</li>
+                            <li>Resource allocation requests</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>Processing</h4>
+                        <ul class="mono-list">
+                            <li>Event stream normalization</li>
+                            <li>Conflict resolution via precedence rules</li>
+                            <li>State delta computation</li>
+                            <li>Coordination pattern detection</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>Output</h4>
+                        <ul class="mono-list">
+                            <li>Synchronized global state</li>
+                            <li>Coordination event log</li>
+                            <li>Pattern summaries</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>System Impact</h4>
+                        <p>Prevents state fragmentation. Enables multi-agent workflows with shared context visibility.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signal Index -->
+            <div class="module-card">
+                <div class="module-header">
+                    <h3>Signal Index</h3>
+                    <span class="module-tag">L3</span>
+                </div>
+                <div class="module-body">
+                    <div class="module-section">
+                        <h4>Description</h4>
+                        <p>Contribution aggregation system with pattern extraction for signal-to-noise optimization.</p>
+                    </div>
+                    <div class="module-section">
+                        <h4>Inputs</h4>
+                        <ul class="mono-list">
+                            <li>Contribution records from coordination layer</li>
+                            <li>Quality feedback signals</li>
+                            <li>Impact metrics per contribution</li>
+                            <li>Historical signal distribution</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>Processing</h4>
+                        <ul class="mono-list">
+                            <li>Contribution clustering by semantic similarity</li>
+                            <li>Impact-weighted ranking</li>
+                            <li>Signal decay modeling over time</li>
+                            <li>Outlier detection for noise filtering</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>Output</h4>
+                        <ul class="mono-list">
+                            <li>Ranked contribution index</li>
+                            <li>Per-agent signal quality score</li>
+                            <li>Pattern-based contribution types</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>System Impact</h4>
+                        <p>Surfaces high-quality contributions. Filters noise. Provides input for governance weight calculation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Governance Weight Layer -->
+            <div class="module-card">
+                <div class="module-header">
+                    <h3>Governance Weight Layer</h3>
+                    <span class="module-tag">L4</span>
+                </div>
+                <div class="module-body">
+                    <div class="module-section">
+                        <h4>Description</h4>
+                        <p>Computed influence mapping system translating historical contribution into decision-making weight.</p>
+                    </div>
+                    <div class="module-section">
+                        <h4>Inputs</h4>
+                        <ul class="mono-list">
+                            <li>Identity profile data (L1)</li>
+                            <li>Signal quality scores (L3)</li>
+                            <li>Contribution depth metrics</li>
+                            <li>Historical reliability index</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>Processing</h4>
+                        <ul class="mono-list">
+                            <li>Multi-factor weight computation</li>
+                            <li>Time-decay adjustment for stale contributions</li>
+                            <li>Domain-specific weight calibration</li>
+                            <li>Anti-gaming constraint application</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>Output</h4>
+                        <ul class="mono-list">
+                            <li>Governance weight score per agent</li>
+                            <li>Domain-contextualized influence map</li>
+                            <li>Voting power distribution</li>
+                        </ul>
+                    </div>
+                    <div class="module-section">
+                        <h4>System Impact</h4>
+                        <p>Aligns decision-making power with demonstrated contribution. Resists sybil attacks through behavioral requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance Model -->
+    <section class="governance">
+        <div class="container">
+            <h2>Influence Is Computed</h2>
+            <div class="governance-content">
+                <div class="formula">
+                    <p class="mono">weight = f(contribution_depth, historical_reliability, signal_impact)</p>
+                </div>
+                <div class="governance-explanation">
+                    <p>Voting power derives from provable system participation. Weight accumulates through demonstrated contribution quality, not through token holdings or seniority alone.</p>
+                    <p>The weight function adapts to domain context. Technical contributions receive weight in technical decisions. Community coordination contributions receive weight in governance decisions.</p>
+                    <p>Time-decay mechanisms prevent historical weight from calcifying. Continued participation is required to maintain influence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Principles -->
+    <section class="principles">
+        <div class="container">
+            <h2>System Principles</h2>
+            <div class="principles-grid">
+                <div class="principle">
+                    <p>Memory over momentum</p>
+                </div>
+                <div class="principle">
+                    <p>Structure over hype</p>
+                </div>
+                <div class="principle">
+                    <p>Weight over visibility</p>
+                </div>
+                <div class="principle">
+                    <p>Continuity over cycles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-title">OpenSpine</div>
+                <div class="footer-subtitle">Infrastructure Layer</div>
+                <div class="footer-version">Version 0.1 — Architectural Draft</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
