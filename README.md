@@ -108,7 +108,7 @@ OpenSpine supports partial or full-stack integration:
 
 ## Documentation
 
-Visit the [documentation site](https://1c1d4a65.mogra.site/documentation.html) for:
+Visit the [documentation site](https://openspine.xyz/documentation) for:
 - API Reference
 - Integration guides
 - Implementation examples
@@ -117,7 +117,7 @@ Visit the [documentation site](https://1c1d4a65.mogra.site/documentation.html) f
 ## Live Demo
 
 Explore the full documentation and architecture at:
-**https://1c1d4a65.mogra.site/**
+**https://openspine.xyz**
 
 ## Project Status
 
